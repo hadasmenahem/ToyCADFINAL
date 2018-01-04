@@ -33,7 +33,8 @@ public class Ellipse extends Shape {
 	public double CircumferenceCalculation(){
 		double aSubAxis=aSubAxisCalculation();
 		double bSubAxis=bSubAxisCalculation();
-		return (Math.PI*(aSubAxis+bSubAxis)-Math.sqrt(10*aSubAxis*bSubAxis+3*(Math.pow(aSubAxis, 2)+Math.pow(bSubAxis, 2))));
+		return (Math.PI*(aSubAxis+bSubAxis)-Math.sqrt(10*aSubAxis*bSubAxis+
+		3*(Math.pow(aSubAxis, 2)+Math.pow(bSubAxis, 2))));
 	}
 	
 	public void Move(double xUnitsToMove, double yUnitsToMove){

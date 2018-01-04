@@ -61,7 +61,8 @@ public class ToyCAD {
 	}
 	
 	private static void IsCoordinateInsideShape(ArrayList<Shape> shapesArray, String[] splitInputLine){
-		if (shapesArray.get(Integer.parseInt(splitInputLine[1])).IsInside(new Point(Double.parseDouble(splitInputLine[2]), Double.parseDouble(splitInputLine[3])))){
+		if (shapesArray.get(Integer.parseInt(splitInputLine[1])).IsInside(new Point(Double.parseDouble(splitInputLine[2]),
+		      Double.parseDouble(splitInputLine[3])))){
 			System.out.println("1");
 		}
 		else{
@@ -79,27 +80,33 @@ public class ToyCAD {
 		switch(shapeType.toLowerCase()){
 		
 		case "circle":
-			shapesArray.add(new Circle(ID_Counter, color, new Point(dataInDoubleType[0], dataInDoubleType[1]), dataInDoubleType[2]));
+			shapesArray.add(new Circle(ID_Counter, color, new Point(dataInDoubleType[0], dataInDoubleType[1]),
+					 dataInDoubleType[2]));
 			break;
 		
 		case "ellipse":
-			shapesArray.add(new Ellipse(ID_Counter, color,new Point(dataInDoubleType[0], dataInDoubleType[1]),new Point(dataInDoubleType[2], dataInDoubleType[3]), dataInDoubleType[4]));
+			shapesArray.add(new Ellipse(ID_Counter, color,new Point(dataInDoubleType[0], dataInDoubleType[1]),
+					new Point(dataInDoubleType[2], dataInDoubleType[3]), dataInDoubleType[4]));
 			break;
 			
 		case "parallelogram":
-			shapesArray.add(new Parallelogram(ID_Counter, color,new Point(dataInDoubleType[0], dataInDoubleType[1]),new Point(dataInDoubleType[2], dataInDoubleType[3]), new Point(dataInDoubleType[4], dataInDoubleType[5])));
+			shapesArray.add(new Parallelogram(ID_Counter, color,new Point(dataInDoubleType[0], dataInDoubleType[1]),
+					new Point(dataInDoubleType[2], dataInDoubleType[3]), new Point(dataInDoubleType[4], dataInDoubleType[5])));
 			break;
 			
 		case "rectangle":
-			shapesArray.add(new Rectangle(ID_Counter, color, new Point(dataInDoubleType[0], dataInDoubleType[1]), new Point(dataInDoubleType[2],dataInDoubleType[3])));
+			shapesArray.add(new Rectangle(ID_Counter, color, new Point(dataInDoubleType[0], dataInDoubleType[1]),
+					 new Point(dataInDoubleType[2],dataInDoubleType[3])));
 			break;
 			
 		case "square":
-			shapesArray.add(new Square(ID_Counter, color,new Point(dataInDoubleType[0],dataInDoubleType[1]),dataInDoubleType[2]));
+			shapesArray.add(new Square(ID_Counter, color,new Point(dataInDoubleType[0],dataInDoubleType[1]),
+					dataInDoubleType[2]));
 			break;
 			
 		case "triangle":
-			shapesArray.add(new Triangle(ID_Counter, color, new Point(dataInDoubleType[0],dataInDoubleType[1]), new Point(dataInDoubleType[2],dataInDoubleType[3]), new Point(dataInDoubleType[4], dataInDoubleType[5])));
+			shapesArray.add(new Triangle(ID_Counter, color, new Point(dataInDoubleType[0],dataInDoubleType[1]),
+					 new Point(dataInDoubleType[2],dataInDoubleType[3]), new Point(dataInDoubleType[4], dataInDoubleType[5])));
 			break;
 			
 		}
